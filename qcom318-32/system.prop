@@ -1,0 +1,192 @@
+#
+# system.prop for qcom318-32
+#
+
+ro.build.version.qcom=LA.UM.5.6.r1-03800-89xx.0
+# Radio
+rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
+rild.libargs=-d /dev/smd0
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+DEVICE_PROVISIONED=1
+persist.radio.no_wait_for_card=1
+persist.radio.dfr_mode_set=1
+persist.radio.relay_oprt_change=1
+persist.radio.msgtunnel.start=true
+persist.radio.oem_ind_to_both=0
+persist.qcril_uim_vcc_feature=1
+persist.data.qmi.adb_logmask=0
+persist.radio.0x9e_not_callname=1
+persist.radio.mt_sms_ack=30
+persist.radio.force_get_pref=1
+persist.dpm.feature=0
+persist.radio.is_wps_enabled=true
+persist.radio.custom_ecc=1
+persist.radio.apm_sim_not_pwdn=1
+persist.radio.sib16_support=1
+persist.radio.apn_delay=5000
+keyguard.no_require_sim=true
+persist.radio.domain.ps=0
+persist.radio.snapshot_enabled=1
+persist.radio.snapshot_timer=22
+persist.rmnet.mux=enabled
+persist.radio.sw_mbn_update=1
+persist.radio.custom_ecc=1
+persist.radio.app_mbn_path=/fsg
+persist.radio.sar_sensor=1
+persist.radio.call.audio.output=0
+#Enabling this breaks shit
+#telephony.lteOnCdmaDevice=1
+
+# Radio IMS
+persist.radio.jbims=1
+persist.radio.RATE_ADAPT_ENABLE=1
+persist.radio.VT_ENABLE=1
+persist.radio.VT_HYBRID_ENABLE=1
+persist.radio.VT_USE_MDM_TIME=0
+persist.radio.REVERSE_QMI=0
+persist.radio.ROTATION_ENABLE=1
+persist.radio.calls.on.ims=true
+persist.rcs.presence.provision=0
+service.qti.ims.enabled=1
+net.lte.volte_call_capable=true
+persist.ims.enabler.enabled=true
+
+#Radio Data
+ro.use_data_netmgrd=true
+persist.data.netmgrd.qos.enable=true
+persist.data.mode=concurrent
+
+# Audio
+audio.deep_buffer.media=true
+audio.offload.buffer.size.kb=64
+audio.offload.gapless.enabled=true
+audio.offload.pcm.16bit.enable=true
+audio.offload.pcm.24bit.enable=true
+
+persist.audio.calfile0=/etc/acdbdata/Bluetooth_cal.acdb
+persist.audio.calfile1=/etc/acdbdata/General_cal.acdb
+persist.audio.calfile2=/etc/acdbdata/Global_cal.acdb
+persist.audio.calfile3=/etc/acdbdata/Handset_cal.acdb
+persist.audio.calfile4=/etc/acdbdata/Hdmi_cal.acdb
+persist.audio.calfile5=/etc/acdbdata/Headset_cal.acdb
+persist.audio.calfile6=/etc/acdbdata/Speaker_cal.acdb
+
+persist.audio.fluence.mode=endfire
+persist.audio.fluence.speaker=true
+persist.audio.fluence.voicecall=true
+ro.qc.sdk.audio.fluencetype=none
+ro.qc.sdk.audio.ssr=false
+
+use.voice.path.for.pcm.voip=false
+
+# Bluetooth
+bluetooth.hfp.client=1
+qcom.bluetooth.soc=smd
+qcom.bt.le_dev_pwr_class=1
+ro.bluetooth.dun=true
+ro.bluetooth.hfp.ver=1.7
+ro.bluetooth.sap=true
+ro.qualcomm.bt.hci_transport=smd
+
+# CABL
+ro.qualcomm.cabl=0
+
+# Camera
+camera.disable_zsl_mode=1
+camera.display.umax=1920x1080
+camera.display.lmax=1280x720
+vidc.dec.downscalar_width=1920
+vidc.dec.downscalar_height=1088
+vidc.dec.disable.split.cpu=1
+vidc.enc.dcvs.extra-buff-count=2
+vidc.enc.disable_bframes=1
+vidc.enc.disable_pframes=1
+debug.gralloc.gfx_ubwc_disable=1
+debug.gralloc.enable_fb_ubwc=0
+persist.camera.preview.ubwc=0
+persist.camera.video.ubwc=0
+
+# core_ctrl
+ro.vendor.qti.core_ctl_min_cpu=2
+ro.vendor.qti.core_ctl_max_cpu=4
+
+# CNE
+persist.cne.feature=1
+persist.cne.logging.qxdm=3974
+persist.cne.rat.wlan.chip.oem=WCN
+persist.dpm.feature=0
+persist.sys.cnd.iwlan=1
+
+# Display
+debug.egl.hw=1
+debug.enable.sglscale=1
+debug.mdpcomp.logs=0
+debug.sf.hw=1
+dev.pm.dyn_samplingrate=1
+persist.demo.hdmirotationlock=false
+persist.hwc.mdpcomp.enable=true
+ro.opengles.version=196610
+
+# FM
+ro.fm.transmitter=false
+
+# FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
+# HWUI
+ro.hwui.texture_cache_size=72
+ro.hwui.layer_cache_size=48
+ro.hwui.r_buffer_cache_size=8
+ro.hwui.path_cache_size=32
+ro.hwui.gradient_cache_size=1
+ro.hwui.drop_shadow_cache_size=6
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.text_small_cache_width=1024
+ro.hwui.text_small_cache_height=1024
+ro.hwui.text_large_cache_width=2048
+ro.hwui.text_large_cache_height=2048
+
+# Media
+media.aac_51_output_enabled=true
+media.msm8956hw=0
+mm.enable.qcom_parser=1048575
+mm.enable.sec.smoothstreaming=false
+mm.enable.smoothstreaming=false
+mmp.enable.3g2=true
+vidc.disable.split.mode=1
+
+# Qualcomm
+com.qc.hardware=true
+debug.qc.hardware=true
+persist.timed.enable=true
+
+# USB
+ro.usb.mtp=2e82
+ro.usb.mtp_adb=2e76
+ro.usb.ptp=2e83
+ro.usb.ptp_adb=2e84
+ro.usb.bpt=2ec1
+ro.usb.bpt_adb=2ec5
+ro.usb.bpteth=2ec3
+ro.usb.bpteth_adb=2ec6
+
+# Vendor Extension
+ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.at_library=libqti-at.so
+ro.vendor.gt_library=libqti-gt.so
+
+# XLAT
+persist.net.doxlat=true
+
+# ADDITONAL
+ro.radio.imei.sv=2
+ro.mot.ignore_csim_appid=true
+ro.cutoff_voltage_mv=3200

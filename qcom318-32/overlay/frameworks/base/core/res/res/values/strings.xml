@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <add-resource type="string" name="config_cbs_operator_name" />
+    <add-resource type="string" name="config_cdma_otaspnumschema" />
+    <add-resource type="string" name="config_preferred_time_zone" />
+    <add-resource type="string" name="HD_call_creteria" />
+    <string name="config_cbs_operator_name">@null</string>
+    <string name="config_cdma_otaspnumschema" />
+    <string name="config_preferred_time_zone" />
+    <string name="HD_call_creteria">-1;-1</string>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <add-resource type="bool" name="adjusting_lte_signal_rsrp_level_as_band_changing" />
+    <add-resource type="bool" name="allow_dial_emergency_with_non_emergency_calls" />
+    <add-resource type="bool" name="cdma_same_nai" />
+    <add-resource type="bool" name="config_api_setAKey_is_enabled" />
+    <add-resource type="bool" name="config_apn_metered_by_apn_types" />
+    <add-resource type="bool" name="config_ca_update" />
+    <add-resource type="bool" name="config_carrier_turn_off_wifi_on_ecm" />
+    <add-resource type="bool" name="config_dynamic_mms_user_agent" />
+    <add-resource type="bool" name="config_dynamic_mms_user_agent_profile_url" />
+    <add-resource type="bool" name="config_f38104_subcriberid_enabled" />
+    <add-resource type="bool" name="config_feature_34563_ons_support" />
+    <add-resource type="bool" name="config_hyphenation_feature_enabled" />
+    <add-resource type="bool" name="config_match_special_chars_incalls" />
+    <add-resource type="bool" name="config_meid_device_id_cdma_lte" />
+    <add-resource type="bool" name="config_moto_ftr_4953_tmo_wfc_customization" />
+    <add-resource type="bool" name="config_moto_ftr_5013_att_wfc_customization" />
+    <add-resource type="bool" name="config_need_otasp" />
+    <add-resource type="bool" name="config_operator_name_replace_support" />
+    <add-resource type="bool" name="config_spn_on_roamind_off" />
+    <add-resource type="bool" name="config_suppress_rat_in_manual_selection" />
+    <add-resource type="bool" name="config_use_nv_band_pref" />
+    <add-resource type="bool" name="default_domestic_roaming_data_enabled" />
+    <add-resource type="bool" name="enhancement_gsm_roaming_enabled" />
+    <add-resource type="bool" name="is_broker_home_mcc_mnc" />
+    <add-resource type="bool" name="ftr39071_disable_clean_data_on_power_off" />
+    <add-resource type="bool" name="mdn_min_for_non_provisioned_csim" />
+    <add-resource type="bool" name="read_gid_from_usim_for_ruim" />
+    <bool name="adjusting_lte_signal_rsrp_level_as_band_changing">false</bool>
+    <bool name="allow_dial_emergency_with_non_emergency_calls">true</bool>
+    <bool name="cdma_same_nai">true</bool>
+    <bool name="config_api_setAKey_is_enabled">false</bool>
+    <bool name="config_apn_metered_by_apn_types">false</bool>
+    <bool name="config_ca_update">false</bool>
+    <bool name="config_carrier_turn_off_wifi_on_ecm">false</bool>
+    <bool name="config_dynamic_mms_user_agent">false</bool>
+    <bool name="config_dynamic_mms_user_agent_profile_url">false</bool>
+    <bool name="config_f38104_subcriberid_enabled">false</bool>
+    <bool name="config_feature_34563_ons_support">false</bool>
+    <bool name="config_hyphenation_feature_enabled">false</bool>
+    <bool name="config_match_special_chars_incalls">false</bool>
+    <bool name="config_meid_device_id_cdma_lte">true</bool>
+    <bool name="config_moto_ftr_4953_tmo_wfc_customization">false</bool>
+    <bool name="config_moto_ftr_5013_att_wfc_customization">false</bool>
+    <bool name="config_need_otasp">true</bool>
+    <bool name="config_operator_name_replace_support">false</bool>
+    <bool name="config_spn_on_roamind_off">false</bool>
+    <bool name="config_suppress_rat_in_manual_selection">false</bool>
+    <bool name="config_use_nv_band_pref">true</bool>
+    <bool name="default_domestic_roaming_data_enabled">false</bool>
+    <bool name="enhancement_gsm_roaming_enabled">false</bool>
+    <bool name="is_broker_home_mcc_mnc">false</bool>
+    <bool name="ftr39071_disable_clean_data_on_power_off">true</bool>
+    <bool name="mdn_min_for_non_provisioned_csim">false</bool>
+    <bool name="read_gid_from_usim_for_ruim">false</bool>
+</resources>

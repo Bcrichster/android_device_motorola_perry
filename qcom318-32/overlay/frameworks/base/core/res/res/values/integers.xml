@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <add-resource type="integer" name="eap_preloaded_ssid_retry_count" />
+    <integer name="eap_preloaded_ssid_retry_count">0</integer>
+</resources>

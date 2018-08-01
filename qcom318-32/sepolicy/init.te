@@ -1,0 +1,9 @@
+allow init audio_device:chr_file { write ioctl };
+allow init input_device:chr_file ioctl;
+allow init sensors_device:chr_file { write ioctl };
+allow init tee_device:chr_file { write ioctl };
+
+allow init debugfs:file write;
+allow init firmware_file:dir mounton;
+
+binder_use(init)
