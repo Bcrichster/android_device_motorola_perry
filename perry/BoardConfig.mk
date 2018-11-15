@@ -20,9 +20,13 @@ include device/motorola/msm8937-common/BoardConfigCommon.mk
 DEVICE_PATH := device/motorola/perry
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := perry,perry_retail
-
+TARGET_OTA_ASSERT_DEVICE := perry,perry_retail,sperry
 TARGET_KERNEL_CONFIG := perry_defconfig
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
+
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_perry
+TARGET_RECOVERY_DEVICE_MODULES := libinit_perry
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3623878656    #  3538944 * 1024 mmcblk0p53
