@@ -97,8 +97,8 @@ USE_OPENGL_RENDERER := true
 TARGET_ANDROID_FILESYSTEM_CONFIG_H := $(VENDOR_PATH)/android_filesystem_config.h
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_moto
-TARGET_RECOVERY_DEVICE_MODULES := libinit_moto
+#TARGET_INIT_VENDOR_LIB := libinit_moto
+#TARGET_RECOVERY_DEVICE_MODULES := libinit_moto
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true

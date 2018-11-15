@@ -14,16 +14,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifneq ($(filter albus cedric montana owens perry potter sanders,$(TARGET_DEVICE)),)
+ifneq ($(filter owens perry,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
-
-include $(CLEAR_VARS)
 
 FIRMWARE_ADSP_IMAGES := \
     adsp.b00 adsp.b01 adsp.b02 adsp.b03 adsp.b04 adsp.b05 adsp.b06 \
     adsp.b07 adsp.b08 adsp.b09 adsp.b10 adsp.b11 adsp.b12 adsp.b13 \
-    adsp.mdt
+    adsp.b14 adsp.mdt
 
 FIRMWARE_ADSP_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FIRMWARE_ADSP_IMAGES)))
 $(FIRMWARE_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
@@ -34,10 +32,34 @@ $(FIRMWARE_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_ADSP_SYMLINKS)
 
+CMN_IMAGES := \
+    cmnlib.b00 cmnlib.b01 cmnlib.b02 cmnlib.b03 cmnlib.b04 cmnlib.b05 \
+    cmnlib.mdt
+
+CMN_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(CMN_IMAGES)))
+$(CMN_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "CMN firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(CMN_SYMLINKS)
+FIRMWARE_CPPF_IMAGES := \
+    cppf.b00 cppf.b01 cppf.b02 cppf.b03 cppf.b04 cppf.b05 cppf.b06 cppf.mdt
+
+FIRMWARE_CPPF_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FIRMWARE_CPPF_IMAGES)))
+$(FIRMWARE_CPPF_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Fingerprint Firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_CPPF_SYMLINKS)
+
 FIRMWARE_FINGERPRINT_IMAGES := \
-    fpctzappfingerprint.b00 fpctzappfingerprint.b01 fpctzappfingerprint.b02 \
-    fpctzappfingerprint.b03 fpctzappfingerprint.b04 fpctzappfingerprint.b05 \
-    fpctzappfingerprint.b06 fpctzappfingerprint.mdt
+    egtzappfingerprint.b00 egtzappfingerprint.b01 egtzappfingerprint.b02 \
+    egtzappfingerprint.b03 egtzappfingerprint.b04 egtzappfingerprint.b05 \
+    egtzappfingerprint.b06 egtzappfingerprint.mdt
 
 FIRMWARE_FINGERPRINT_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FIRMWARE_FINGERPRINT_IMAGES)))
 $(FIRMWARE_FINGERPRINT_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
@@ -47,6 +69,30 @@ $(FIRMWARE_FINGERPRINT_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_FINGERPRINT_SYMLINKS)
+FIRMWARE_MBA_IMAGES := \
+    mba.mbn
+
+FIRMWARE_MBA_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FIRMWARE_MBA_IMAGES)))
+$(FIRMWARE_MBA_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "MBA Firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MBA_SYMLINKS)
+
+FIRMWARE_MDTP_IMAGES := \
+    mdtp.b00 mdtp.b01 mdtp.b02 mdtp.b03 mdtp.b04 mdtp.b05 mdtp.b06 \
+    mdtp.mdt
+
+FIRMWARE_MDTP_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FIRMWARE_MDTP_IMAGES)))
+$(FIRMWARE_MDTP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "MDTP Firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MDTP_SYMLINKS)
 
 FIRMWARE_MODEM_IMAGES := \
     modem.b00 modem.b01 modem.b02 modem.b04 modem.b05 modem.b06 \
@@ -62,6 +108,17 @@ $(FIRMWARE_MODEM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MODEM_SYMLINKS)
+QDSP_IMAGES := \
+    qdsp6m.qdb
+
+QDSP_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(QDSP_IMAGES)))
+$(QDSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Playready firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(QDSP_SYMLINKS)
 
 FIRMWARE_WCNSS_IMAGES := \
     wcnss.b00 wcnss.b01 wcnss.b02 wcnss.b04 wcnss.b06 \
@@ -88,6 +145,9 @@ $(FIRMWARE_WIDEVINE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_WIDEVINE_SYMLINKS)
+
+include device/motorola/qcom318-32/tftp.mk
+#include device/motorola/qcom318-32/expat.mk
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

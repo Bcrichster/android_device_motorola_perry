@@ -59,16 +59,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
-
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
     com.dsi.ant.antradio_library \
     libantradio
-
-# AdAway
-PRODUCT_PACKAGES += \
-    AdAway \
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -122,16 +117,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite
 
-# CMwallpapers
-PRODUCT_PACKAGES += \
-    CMWallpapers \
-
-# DSPManager
-PRODUCT_PACKAGES += \
-    DSPManager \
-    audio_effects.conf \
-    libcyanogen-dsp
-
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
@@ -160,17 +145,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
-# Jelly
-PRODUCT_PACKAGES += \
-    Jelly \
-
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/fpc1020.kl:system/usr/keylayout/fpc1020.kl
-
-# Lawnchair
-PRODUCT_PACKAGES += \
-    Lawnchair \
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -194,10 +171,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
     $(LOCAL_PATH)/configs/libnfc-nxp_ds.conf:system/etc/libnfc-nxp_ds.conf \
 
-# NovaLauncher
-PRODUCT_PACKAGES += \
-    NovaLauncher \
-
 PRODUCT_PACKAGES += \
     libnfc \
     libnfc_jni \
@@ -217,10 +190,6 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libOmxVidcCommon \
     libstagefrighthw
-
-# ParanoidPapers
-PRODUCT_PACKAGES += \
-    ParanoidPapers \
 
 # Power
 PRODUCT_PACKAGES += \
@@ -255,30 +224,12 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf
 
-# Snapdragon Apps
-PRODUCT_PACKAGES += \
-    MusicFX \
-    SnapdragonGallery \
-    SnapdragonMusic
-
 # Substratum
 PRODUCT_PACKAGES += \
     ThemeInterfacer
 
 # Telephony
 PRODUCT_PACKAGES += telephony-ext
-
-# Terminal
-PRODUCT_PACKAGES += \
-    Terminal \
-
-# ViPER4Android
-PRODUCT_PACKAGES += \
-    ViPER4Android \
-
-# ViPER4Arise
-#PRODUCT_PACKAGES += \
-#    ViPER4Arise \
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -306,11 +257,6 @@ PRODUCT_PACKAGES += \
     WCNSS_qcom_wlan_nv_Brazil.bin \
     WCNSS_qcom_wlan_nv_India.bin \
     WCNSS_wlan_dictionary.dat
-
-# WireGuard
-PRODUCT_PACKAGES += \
-    WireGuard \
-    wireguard-android
 
 PRODUCT_COPY_FILES += \
     kernel/motorola/msm8937/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
