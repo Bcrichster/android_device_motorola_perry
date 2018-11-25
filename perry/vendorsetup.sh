@@ -1,1 +1,1 @@
-add_lunch_combo bliss_perry-userdebug
+add_lunch_combo lineage_perry-userdebug
