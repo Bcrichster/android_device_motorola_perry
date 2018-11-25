@@ -14,7 +14,9 @@
 # limitations under the License.
 
 $(call inherit-product, device/motorola/perry/full_perry.mk)
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
+# Boot animation
 # Boot animation
 TARGET_SCREEN_WIDTH := 720
 TARGET_SCREEN_HEIGHT := 1280
